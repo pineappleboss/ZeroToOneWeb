@@ -7,7 +7,9 @@ export default new Vuex.Store({
   state: {
     user: {
       username: window.localStorage.getItem('user' || '[]') == null ? '' : JSON.parse(window.localStorage.getItem('user' || '[]')).username
-    }
+    },
+    //菜单
+    adminMenu: []
   },
   mutations: {
     login (state, user) {
@@ -17,6 +19,10 @@ export default new Vuex.Store({
     logout(state){
         state.user = []
         window.localStorage.removeItem("user")
-    }
+    },
+    //初始化菜单
+    initAdminMenu (state, menus) {
+        state.adminMenus = menus
+      }
   }
 })

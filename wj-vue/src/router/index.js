@@ -5,15 +5,22 @@ import AppIndex from '@/components/home/AppIndex'
 import home from '@/components/home'
 import labrary from '@/components/labrary/LibraryIndex'
 import register from '@/components/register'
+import admin from '@/components/admin/AdminIndex'
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
+      path: '/admin',
+      name: 'admin',
+      component: admin,
+    },
+    {
       path: '/',
       name: 'login',
       component: login,
-    },{
+    },
+    {
       path: '/login',
       name: 'login',
       component: login,
