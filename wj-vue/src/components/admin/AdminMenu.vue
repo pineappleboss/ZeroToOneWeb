@@ -7,7 +7,9 @@
       mode="vertical"
       background-color="#545c64"
       text-color="#fff"
+      height='100%'
       active-text-color="#ffd04b">
+      
       <div style="height: 80px;"></div>
       <template v-for="(item,i) in adminMenus">
         <!--index 没有用但是必需字段且为 string -->
@@ -16,7 +18,7 @@
             <i :class="item.iconCls"></i>
             {{item.nameZh}}
           </span>
-          <el-menu-item v-for="child in item.children" :key="child.path" :index="child.path">
+          <el-menu-item v-for="child in item.children" :key="child.name" :index="child.path">
             <i :class="child.icon"></i>
             {{ child.nameZh }}
           </el-menu-item>
@@ -31,9 +33,10 @@
       name: 'AdminMenu',
       computed: {
         adminMenus () {
-            console.log(this.$store.state.adminMenus)
           return this.$store.state.adminMenus
+        
         }
+
       }
     }
 </script>

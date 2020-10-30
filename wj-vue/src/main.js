@@ -54,12 +54,12 @@ router.beforeEach((to, from, next) => {
 });
 const initAdminMenu=(router,store)=>{
   axios.post("/menu",store.state.user).then(resp=>{
-    debugger
+
     if(resp.data.statusCode===200){
       var fmtRoutes=formatRoutes(resp.data.data);
-      debugger
+  
       router.addRoutes(fmtRoutes);
-      debugger
+
       store.commit('initAdminMenu', fmtRoutes);
     }
   })
@@ -67,7 +67,7 @@ const initAdminMenu=(router,store)=>{
 
 const formatRoutes=(routes)=>{
   let fmtRoutes = []
-  debugger
+ 
   routes.forEach(route => {
     if (route.children) {
       route.children = formatRoutes(route.children)
@@ -85,5 +85,5 @@ const formatRoutes=(routes)=>{
     }
     fmtRoutes.push(fmtRoute)
   })
-  return  
+  return  fmtRoutes;
 }
