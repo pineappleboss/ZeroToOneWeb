@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import {createRouter} from '../../router'
+
   export default {
     name: 'Header',
     methods: {

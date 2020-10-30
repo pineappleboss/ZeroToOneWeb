@@ -6,15 +6,23 @@ import home from '@/components/home'
 import labrary from '@/components/labrary/LibraryIndex'
 import register from '@/components/register'
 import admin from '@/components/admin/AdminIndex'
+// import userProfile from '@/components/admin/user/userProfile'
 Vue.use(Router);
-
 export default new Router({
   routes: [
     {
       path: '/admin',
       name: 'admin',
       component: admin,
+    //   children:[
+    //     {
+    //       path: '/userProfile',
+    //       name: 'userProfile',
+    //       component: userProfile,
+    //     }
+    //   ]
     },
+
     {
       path: '/',
       name: 'login',
