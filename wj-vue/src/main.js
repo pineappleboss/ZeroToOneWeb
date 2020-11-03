@@ -7,7 +7,7 @@ import store from "./vuex/vuex"
 
 
 var axios = require('axios')
-axios.defaults.baseURL = 'http://localhost:8088/api'
+axios.defaults.baseURL = 'http://114.116.247.86:8088/api'
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
