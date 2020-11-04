@@ -1,6 +1,6 @@
 <template>
   <el-form class="login-container" label-position="left" label-width="0px">
-    <h3 class="login_title">系统登录jenkins</h3>
+    <h3 class="login_title">系统登录</h3>
     <el-form-item>
       <el-input type="text" v-model="loginForm.username" auto-complete="off" placeholder="账号"></el-input>
     </el-form-item>
